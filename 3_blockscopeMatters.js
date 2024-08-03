@@ -1,8 +1,8 @@
-var price = 20 ;
+var price = 20 ; //global scope
 var isSale = true ;
 
 if (isSale){
-   let price = 20 - 2;
+   let price = 20 - 2; //block scope
     console.log(`sale is ${price}`)
 }
 
