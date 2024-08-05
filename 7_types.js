@@ -43,15 +43,13 @@ if (!userName){
 console.log('--- challenges ---');
 /* chalenges 1:
 - true
-- true
 - false
-- false
+- (true)
 - false
 - false
  */
 
 /* challenges 2:
-- true
 - false
 - true
 - false
@@ -60,5 +58,5 @@ console.log('--- challenges ---');
  */
 
 /* -- challenges 3:
-' ', 0, undefined, NaN, null
+' ', 0, undefined, NaN, null, false
  */
