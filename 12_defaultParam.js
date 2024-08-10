@@ -3,5 +3,5 @@ function toFahrenheit(celcius,decimal = 1){
     return Number(fahrenheit.toFixed(decimal));
 }
 
-let hasil = toFahrenheit(21);
+let hasil = toFahrenheit(21,0);
 console.log(hasil)
