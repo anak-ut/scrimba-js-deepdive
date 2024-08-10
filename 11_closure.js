@@ -1,11 +1,11 @@
 
 function handleCounter(){
     let likeCounter = 0;
-    return function addKonter(){
+    function addKonter(){
         likeCounter += 1;
         return likeCounter;
     }
-    // addKonter();
+    return addKonter;
    // console.log(likeCounter)
 }
 
@@ -19,14 +19,13 @@ console.log(hasil())
 let outer = () => {
     let b= 10
     let inner = () => {
-       let a = 20
+       let a = 59
        console.log(a+b)
     }
-
     return inner
  }
- console.log(outer()) // first executed
- console.log(outer()) // second executed
+ let cetakOuter = outer();
+ console.log(cetakOuter()) // first executed
 
 // contoh lain dari : https://medium.com/technology-hits/mastering-javascript-closures-your-essential-guide-d5fec4d52bf2
 
@@ -38,9 +37,9 @@ function outerFunc(){
     return innerFunc;
 }
 
-const contohClosure = outerFunc();
+let contohClosure = outerFunc();
 console.log(contohClosure());
-contohClosure();
+// contohClosure();
 
 
 // contoh lain lagi dari : https://blog.carlosrojas.dev/understanding-javascript-closures-how-they-work-and-when-to-use-them-6ec1e5cf5f12
