@@ -38,6 +38,8 @@ function greetingUser(nama,callback){ // fungsi callback
 const hasil = greetingUser(username, (name)=> `hasil callback : hi there, ${name}`);
 
 console.log(hasil);
+const hasil2 = greetingUser('joko',(nama)=> console.log(nama));
+console.log(hasil2)
 
 // tambahan:
 // callback adalah fungsi yang akan dijadikan nilai/parameter pada fungsi lain(fungsi utama)
