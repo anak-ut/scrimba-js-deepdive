@@ -15,7 +15,7 @@ console.log(`versi fungsi biasa: ${capitalizeName(username)}`)
 
 // --- --- --- --- ---
 
-// kita tulis ulang fungsi diatas dg arrow
+// kita tulis ulang fungsi diatas menjadi arrow
 
 const kapital = (nama) => `${nama.charAt(0).toUpperCase()}${nama.slice(1)}`
     // hapus keyword function dan nama fungsi.
@@ -31,15 +31,13 @@ console.log(`versi arrow func: ${kapital(username)}`);
 
 // buat fungsi greet dg fungsi biasa
 
-function greetingUser(nama,callback){ // fungsi callback
+function greetingUser(nama,callback){ // merupakan main function
     return callback(kapital(nama));
 }
 
-const hasil = greetingUser(username, (name)=> `hasil callback : hi there, ${name}`);
+const hasil = greetingUser(username, (nama)=> `hasil callback : hi there, ${nama}`);
 
 console.log(hasil);
-const hasil2 = greetingUser('joko',(nama)=> console.log(nama));
-console.log(hasil2)
 
 // tambahan:
 // callback adalah fungsi yang akan dijadikan nilai/parameter pada fungsi lain(fungsi utama)
