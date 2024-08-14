@@ -5,7 +5,7 @@
 // - working with classes & object easier
 
 // fungsi biasa
-const username = 'john';
+const username = 'jokowidodol';
 
 function capitalizeName(name){
     return `${name.charAt(0).toUpperCase()}${name.slice(1)}`
@@ -36,8 +36,9 @@ function greetingUser(nama,callback){ // merupakan main function
 }
 
 const hasil = greetingUser(username, (nama)=> `hasil callback : hi there, ${nama}`);
-
+const result = greetingUser('jokowi', nama=> `jancok kon ${nama}`);
 console.log(hasil);
+console.log(result);
 
 // tambahan:
 // callback adalah fungsi yang akan dijadikan nilai/parameter pada fungsi lain(fungsi utama)
