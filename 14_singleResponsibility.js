@@ -13,6 +13,8 @@ console.log(dobeLike());
 console.log(dobeLike());
 console.log(dobeLike());
 
+
+// --------------------------------------------------------
 // contoh lain :
 // fetching data from API
 // fungsi dibawah sebelum ikut rules single responsibility func
@@ -33,8 +35,10 @@ getData('https://jsonplaceholder.typicode.com', '/comments');
 
 // refactoring fungsi diatas
 
+/*
+
 function getData(baseurl){
-    function(route){
+    return function(route){
         fetch('${baseurl}${route}')
         .then(response => response.json())
         .then(data => console.log(data))
@@ -46,4 +50,19 @@ function getData(baseurl){
 const getSosmeData = getData('https://jsonplaceholder.typicode.com');
 // memanggil inner fungsi route nya
 getSosmeData('/comments');
-getSosmeData('posts');
+getSosmeData('/posts');
+
+*/
+// bahkan fungsi diatas masih bisa dipisah/ dibuat single resp app
+// dengan cara fungsi console.log-nya dianggap sbg callback.
+// sehingga kita bs passing fungsi tsb menjadi tidak hanya sbg console.log, mungkin fungsi yg lain yg bs kita tentukan
+
+// single resp jilid 2 wkwk
+
+function getData(baseurl){
+    function(route){
+        fetch('${baseurl}${route}')
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
+}
