@@ -70,6 +70,7 @@ function getData(baseurl){
 }
 
 // kunci single resp func adalah penggunaan anonymous funct.
+// dan breakdonw parameter ke inner anonym funct.
 // cara pakai fungsi diatas
 // bungkus dulu utk memanggil route
 // bungkus lagi utk menggunakan callback
