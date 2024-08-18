@@ -39,7 +39,7 @@ getData('https://jsonplaceholder.typicode.com', '/comments');
 
 function getData(baseurl){
     return function(route){
-        fetch('${baseurl}${route}')
+        fetch(`${baseurl}${route}`)
         .then(response => response.json())
         .then(data => console.log(data))
     }
@@ -60,9 +60,25 @@ getSosmeData('/posts');
 // single resp jilid 2 wkwk
 
 function getData(baseurl){
-    function(route){
-        fetch('${baseurl}${route}')
-        .then(response => response.json())
-        .then(data => console.log(data))
+    return function(route){
+        return function(callback){
+            fetch(`${baseurl}${route}`)
+            .then(response => response.json())
+            .then(data => callback(data))
+        }
     }
 }
+
+// kunci single resp func adalah penggunaan anonymous funct.
+// cara pakai fungsi diatas
+// bungkus dulu utk memanggil route
+// bungkus lagi utk menggunakan callback
+const getSocmeData = getData('https://jsonplaceholder.typicode.com'); // using func baseurl
+
+const getSocmeDataPost = getSocmeData('/posts');
+
+getSocmeDataPost(posts => {
+    posts.forEach(post => {
+console.log(post.id,'.',post.title);
+    });
+})
