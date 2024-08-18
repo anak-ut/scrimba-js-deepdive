@@ -8,7 +8,7 @@ const user = {
   };
 
   function displayUser(){
-    console.log(`username: ${user.username} | email: ${user.email}`);
+    console.log(`username: ${user.username} | email: ${user.email}`); //pake dot notation karna menggunakan bukan string
   }
 
   displayUser();
