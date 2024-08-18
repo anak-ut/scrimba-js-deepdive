@@ -37,3 +37,4 @@ const colorPalette = {
 
 // value diambil dari const blue, maka tidak perlu value, ckup key saja.
 console.log(colorPalette);
+console.log(colorPalette.yellow, colorPalette.blue)
