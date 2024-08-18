@@ -14,8 +14,36 @@ console.log(dobeLike());
 console.log(dobeLike());
 
 // contoh lain :
+// fetching data from API
+// fungsi dibawah sebelum ikut rules single responsibility func
+/*
+
 function getData(baseurl, route){
     fetch(`${baseurl}${route}`)
     .then(response => response.json())
     .then(data => console.log(data));
 }
+
+getData('https://jsonplaceholder.typicode.com', '/posts');
+getData('https://jsonplaceholder.typicode.com', '/comments');
+*/
+// untuk menggunakan route post dan comment harus memanggil fungsi generik
+// ada duplikasi dalam memanggil baseurl
+// sebaiknya di jadikan single resp. func
+
+// refactoring fungsi diatas
+
+function getData(baseurl){
+    function(route){
+        fetch('${baseurl}${route}')
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
+}
+
+// kita bungkus dulu fungsi getData ke dalam variabel utk kita gunakan memanggil inner fungsi funct(route)
+
+const getSosmeData = getData('https://jsonplaceholder.typicode.com');
+// memanggil inner fungsi route nya
+getSosmeData('/comments');
+getSosmeData('posts');
