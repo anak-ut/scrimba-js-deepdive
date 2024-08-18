@@ -53,7 +53,7 @@ delete colors['red'];
 console.log(colors);
 
 function getColor(key){
-    return colors[key]; // not  colors.key
+    return colors[key]; // pakai bracket karna bersifat dinamis
 }
 
 console.log(getColor('orange'));
