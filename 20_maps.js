@@ -14,7 +14,7 @@ console.log(Object.keys(objekk));
 // berkat maps, key bs jadi type apapun tidak harus string
 
 // cara bikin map
-// notes Map([[key1,value1],[key2,value2]])
+// new Map([[key1,value1],[key2,value2]])
 const mapBaru = new Map([
     [1,1],
     [true,true]
