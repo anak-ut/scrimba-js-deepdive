@@ -1,0 +1,1 @@
+// more flexible data type than objects = easily manipulated
