@@ -65,3 +65,11 @@ output :
 */
 
 // kesimpulan : kita bisa menambahkan elemen ke array dengan pakai indeks atau pakai push() method
+
+// mengurangi element pada array
+// menggunakan pop()
+
+const indeks = [toDo.length - 1];
+console.log(indeks);
+toDo.pop() // menghapus element terakhir
+console.log(toDo);
