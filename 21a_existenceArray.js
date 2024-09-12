@@ -25,4 +25,15 @@ const hasil = tempes.some((tempp)=>{
    return tempp.isRecordTemp === true;
 })
 
-console.log(hasil);
+console.log(hasil); // output : true
+// true karena some() method menemukan ada 1 nilai yang dicari
+// lalu stop dan memberikan hasil
+
+// ada every method
+// bernilai true jika semua pengecekan bernilai sesuai statement
+const hasilEvery = tempes.every((tempz)=> {
+    return tempz.isRecordTemp === false;
+})
+console.log(hasilEvery); // output : false
+// karena dari 4 element, hanya 3 yang false.
+// hanya true jika 4 dari 4 elemen false
