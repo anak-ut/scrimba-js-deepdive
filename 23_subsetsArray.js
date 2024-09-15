@@ -8,7 +8,7 @@ const restaurants = [
 
 // map method hanya cek existance. kita ingin cek isinya
 // filter method digunakan utk searching sesuatu di array
-// menggunakan filter method
+// menggunakan filter method (array method)
 
 
 const result1 = restaurants.filter(restaurant =>restaurant.name.startsWith('C'))
@@ -43,3 +43,9 @@ console.log(startCand3Miles);
   { name: 'City Tavern', milesAway: 0.5 }
 ]
 */
+
+// find() method dan filter() method punya cara kerja yang sama
+// find() hanya fokus pada mendapatkan output 1 element
+// find() mengembalikan null jika tidak mendapatkan hasil
+// filter() untuk mendapatkan multiple output.
+// filter() mengembalikan array kosong jika tidak dapatkan hasil pencarian
