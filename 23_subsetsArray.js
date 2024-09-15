@@ -30,3 +30,16 @@ console.log(cariZ);
 // output [] alias array kosong
 
 console.log(restaurants); // array original gak terganggu
+
+// misalkan kita ingin cari restoran dengan nama awal C dan jarak < 3
+const startCand3Miles = restaurants.filter(restos=>
+    restos.name.startsWith('C') && restos.milesAway <3 // pakai short-circuit
+)
+console.log(startCand3Miles);
+// output :
+/*
+[
+  { name: 'Cap City Diner', milesAway: 2.2 },
+  { name: 'City Tavern', milesAway: 0.5 }
+]
+*/
