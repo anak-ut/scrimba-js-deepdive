@@ -9,6 +9,18 @@ const menuItems = [
 
 // method sebelumnya seperti map() method mengembalikan array
 // tetapi reduce() mengembalikan tipe value apapun.
+/*
+sintaks reduce :
+namaArrays.reduce((akumulator, nama element)=>{},initialValue)
+
+dalam hal diatas
+
+menuItems.reduce((akumulator, item)=>{
+    return akumulator + item.price;
+    },0)
+
+    // karena reduce kita ingin buat number value maka initial value kita buat 0
+*/
 // misalkan kita ingin mendapatkan harga total saja dari menuItem
 // jadi yang paling pas menggunakan reduce()
 

@@ -11,7 +11,7 @@ const cars = [
 
   const totalWeight = cars.reduce((acc,car)=>{
     return acc + car.weight
-  },0)
+  },0) // nol (0) adalah initial value
 
   console.log(`berat total semua mobil = ${totalWeight}`);
 
