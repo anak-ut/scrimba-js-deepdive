@@ -33,3 +33,21 @@ console.log(newMenu);
 // atau kita bisa menambahkan ke array yang sudah ada
 const menuPadang = [...breakfast,'nasi padang mbahrekso']
 console.log(menuPadang); // merge array sesuai urutan
+
+// contoh lain kombinasi dengan slice() untuk seolah olah hapus array tertentu
+// ditambah kombinasi findIndex()
+// slice() non mutating
+const angkaGenap = [1,6,8,12,18,44];
+const vokal = ['a','e','o'];
+
+const cobaSlice = angkaGenap.slice(1,4)
+console.log(cobaSlice); // slice(start array ke-1, stop sebelum array ke-4)
+console.log(angkaGenap); // mantab. slice bersifat non mutating
+
+// msialkan kita ingin ganti e --> i
+// kita cari dulu indeks e berapa secara otomatis(no manual)
+const indexE = vokal.findIndex(vok=>vok==='e');
+console.log(indexE);
+// kita pecah indeks sblm indexE, + 'i', lalu dimerge setelah indexE
+const newVokal = [...vokal.slice(0,indexE),'i', ...vokal.slice(indexE+1)];
+console.log(newVokal);
